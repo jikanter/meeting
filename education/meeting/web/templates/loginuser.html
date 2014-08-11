@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html>
+  <body>
+    <div style="color: green">{{flash}}</div>
+    <form method="POST" action="/register/user/login/" enctype="application/x-www-form-urlencoded">
+      {% csrf_token %}
+      <section>
+        <label for="django-username">Username:</label>
+        <input name="django-username" type="text" />
+      </section>
+      <section>
+        <label for="django-password">Password:</label>
+        <input name="django-password" type="password" />
+      </section>
+      <input value="Log In" type="submit" />
+    </form>
+  </body>
+</html>

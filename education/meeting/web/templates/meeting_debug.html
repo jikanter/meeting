@@ -1,0 +1,24 @@
+<div id="debug-section">
+    <div id="link-tests">
+        <a href="/em?{{movie_link}}">movie_link</a>
+        <a href="/em?{{player_link}}">player_link</a>
+        <a href="/em?{{main_link}}">main_link</a>
+        <a href="{{footer_utils}}">footer_utils</a>
+    </div>
+    <div id="javascript-tests">
+        <script type="text/javascript" id="jst-1">//<![CDATA[
+            var checkIfAdmin = function() { 
+                return (window.WhiteBoard.ResponseContext.name == "Admin");
+            };
+        //]]>
+				</script>
+        <a href="#" onClick="console.log('checking if in admin...');console.log(checkIfAdmin()); return false;">CheckIfAdmin()</a><br />
+        <script type="text/javascript" id="jst-2">//<![CDATA[
+            var checkIfJsBridgeEnabled = function() { 
+                return (checkIfAdmin() && (DetectFlashVersion() != false);
+            };
+        //]]>
+				</script>
+        <a href="#" onClick="console.log('checking if flash bridge is available for admin...');console.log(checkIfJsBridgeEnabled()); return false;">CheckIfJsBridgeEnabled()</a><br />
+    </div>
+</div> <!-- [@debug-section] -->

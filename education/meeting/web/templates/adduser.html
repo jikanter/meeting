@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+	<body>
+	  <div style="color: green">{{flash}}</div>
+		<form method="POST" action="/register/user/add/" enctype="application/x-www-form-urlencoded">
+		  {% csrf_token %}
+		  <section>
+		    <label for="django-username">Username:</label>
+		    <input name="django-username" type="text" />
+		  </section>
+		  <section>
+		    <label for="django-firstname">First Name:</label>
+		    <input name="django-firstname" type="text" />
+		  </section>
+		  <section>
+		    <label for="django-lastname">Last Name:</label>
+		    <input name="django-lastname" type="text" />
+		  </section>
+		  <section>
+		    <label for="django-email">Email:</label>
+		    <input name="django-email" type="text" />
+		  </section>
+		  <section>
+		    <label for="django-password">Password:</label>
+		    <input name="django-password" type="password" />
+		  </section>
+		  <section>
+		    <input value="Sign Up" type="Submit" />
+		  </section>
+		</form>
+	</body>
+</html>

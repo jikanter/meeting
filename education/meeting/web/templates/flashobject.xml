@@ -1,0 +1,29 @@
+<script type="text/javascript"><![CDATA[
+	var scriptPlayer = function() {
+	var player = window;
+	player.root = document.getElementsByTagName("object")[0];
+	};
+]]></script>
+<object classid="{{classid}}"
+	width="{{width}}"
+	height="{{height}}"
+	id="{{id}}"
+	align="{% if align %}{{align}}{% else %}top{% endif %}"
+	>
+  <param name="movie" value="{% if contains_media_prefix %}{{movie_src_path}}{% else %}{{media_url}}{{movie_src_path}}{% endif %}"/>
+  <param name="allowScriptAccess" value="{{security_settings}}"/>
+  <param name="quality" value="high"/>
+  <param name="scale" value="noscale"/>
+  <param name="salign" value="lt"/>
+  <param name="bgcolor" value="#ffffff"/>
+  <embed src="{{movie_src_path}}"
+	 bgcolor="#ffffff"
+	 width="{{width}}"
+	 height="{{height}}"
+	 quality="high"
+	 align="{% if align %}{{align}}{% else %}top{% endif %}"
+	 allowScriptAccess="{{security_settings}}"
+	 type="application/x-shockwave-flash"
+	 pluginspage="http://www.macromedia.com/go/getflashplayer"
+	 />
+</object>

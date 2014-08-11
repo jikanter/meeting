@@ -1,0 +1,41 @@
+{% load static %}
+{% get_media_prefix as media_url %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml/DTD/xhtml-strict.dtd">
+    <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" xmlns:v="urn:schemas-microsoft-com:vml">
+<head>
+    <meta content="IE=EmulateIE7" http-equiv="X-UA-Compatible"/>
+    <meta http-equiv="cache-control" content="no-cache"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <script type="text/javascript" src="{{media_url}}js/jquery.js"></script>
+    <script type="text/javascript" src="{{media_url}}js/AC_OETags.js"></script>
+    <script type="text/javascript" src="{{media_url}}js/AC_RunActiveContent.js"></script>
+    <script type="text/javascript" src="{{media_url}}js/wb.js"></script>
+    <script type="text/javascript" src="{{media_url}}js/netobject.js"></script>
+    <script type="text/javascript" src="{{media_url}}js/lisp.js"></script>
+    <script type="text/javascript" src="{{media_url}}js/erlang.js"></script>
+    <script type="text/javascript" src="{{media_url}}js/swfobject.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{media_url}}css/wbstyles.css"/>
+</head>
+<body bgcolor="#ffffff">
+  <div class="content-container">
+    <h1>Meeting</h1>
+    <h2>A quick and simple way to meet online</h2>
+		<h3>Get <a href="/signup">Started</a> or <a href="/login">Log In</a></h3>
+{% if whiteboard_object %}<div class="whiteboard">{{whiteboard_object}}</div> <!-- whiteboard -->{% endif %}
+{% if test_object %}<div class="tswf">{{test_object}}</div><!-- tswf --> {% endif %}
+</div>
+
+
+
+<div class="chat"><input type="text" id="chat-input" width="1000"/></div>
+<div class="play-video-section"> 
+</div>
+
+<div class="submit-lecture-section">
+
+{% if show_debug_section %} {{debug_section}} {% endif %}
+</div>
+
+</div><!-- content-container -->
+</body>
+</html>
